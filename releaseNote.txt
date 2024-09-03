@@ -1,0 +1,15 @@
+* DogOrCat: Dog and Cat image classification model 
+// Create a dataset
+	- use collected image data including dogs and cats. 
+	- image data called by tf.keras function, "tf.keras.utils.image_dataset_from_directory()"
+	- This function do call the folders with directory path. Even if there are many folders by specific names at the path, they divide into class_names.
+	- Called data are splited into training_dataset and valiation_dataset. 8:2
+BATCH_SIZE = 64
+IMG_HEIGHT = 224
+IMG_WIDTH = 224
+
+// batch_size was 32, but the model couldn't classify the images correctly. So increased to 64
+
+// I referred the model layers by TensorFlow sample document.
+
+The model could classify between dogs and cats with a fairly accuracy, but it didn't achieve perfect classification for all images. it might needs learning with a larger dataset or should be changed layers setting.
